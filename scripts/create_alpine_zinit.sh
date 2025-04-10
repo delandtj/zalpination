@@ -13,7 +13,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BASE_DIR="$(dirname "$SCRIPT_DIR")"
 ROOTFS_DIR="$BASE_DIR/rootfs"
 ALPINE_ROOTFS="$BASE_DIR/alpine-zinit/rootfs"
-ALPINE_MINIROOTFS="$BASE_DIR/alpine-zinit/alpine-minirootfs-3.19.1-x86_64.tar.gz"
+ALPINE_MINIROOTFS="$BASE_DIR/alpine-zinit/alpine-minirootfs-edge-x86_64.tar.gz"
 
 # Check dependencies
 echo "Checking dependencies..."

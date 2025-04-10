@@ -17,9 +17,9 @@ cat > "$CONTEXT_FILE" << EOF
 EOF
 
 # Save information about the Alpine minirootfs
-if [ -f "$BASE_DIR/alpine-zinit/alpine-minirootfs-3.19.1-x86_64.tar.gz" ]; then
+if [ -f "$BASE_DIR/alpine-zinit/alpine-minirootfs-edge-x86_64.tar.gz" ]; then
     echo "Alpine minirootfs: Downloaded" >> "$CONTEXT_FILE"
-    echo "Size: $(du -h "$BASE_DIR/alpine-zinit/alpine-minirootfs-3.19.1-x86_64.tar.gz" | cut -f1)" >> "$CONTEXT_FILE"
+    echo "Size: $(du -h "$BASE_DIR/alpine-zinit/alpine-minirootfs-edge-x86_64.tar.gz" | cut -f1)" >> "$CONTEXT_FILE"
 else
     echo "Alpine minirootfs: Not downloaded" >> "$CONTEXT_FILE"
 fi

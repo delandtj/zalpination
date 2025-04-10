@@ -8,15 +8,15 @@ ALPINE_ROOTFS="$BASE_DIR/alpine-zinit/rootfs"
 
 # Check if rootfs directory exists
 if [ ! -d "$ALPINE_ROOTFS" ]; then
-    echo "Alpine rootfs directory not found at $ALPINE_ROOTFS"
-    exit 1
+	echo "Alpine rootfs directory not found at $ALPINE_ROOTFS"
+	exit 1
 fi
 
 # Check if running as root
 if [ "$(id -u)" -ne 0 ]; then
-    echo "Error: This script must be run as root (sudo)."
-    echo "Please run: sudo $0"
-    exit 1
+	echo "Error: This script must be run as root (sudo)."
+	echo "Please run: sudo $0"
+	exit 1
 fi
 
 # Mount necessary filesystems
@@ -28,6 +28,7 @@ mount -o bind /dev "$ALPINE_ROOTFS/dev"
 # Chroot into the rootfs and test zinit
 echo "Chrooting into the rootfs and testing zinit..."
 chroot "$ALPINE_ROOTFS" /sbin/zinit --version
+chroot "$ALPINE_ROOTFS" /sbin/zinit init --container
 chroot "$ALPINE_ROOTFS" /sbin/zinit list
 
 # Unmount filesystems

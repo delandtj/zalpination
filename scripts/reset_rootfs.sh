@@ -12,7 +12,7 @@ fi
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BASE_DIR="$(dirname "$SCRIPT_DIR")"
 ALPINE_DIR="$BASE_DIR/alpine-zinit"
-ALPINE_MINIROOTFS="$ALPINE_DIR/alpine-minirootfs-3.19.1-x86_64.tar.gz"
+ALPINE_MINIROOTFS="$ALPINE_DIR/alpine-minirootfs-edge-x86_64.tar.gz"
 ALPINE_ROOTFS="$ALPINE_DIR/rootfs"
 
 # Check if Alpine minirootfs exists

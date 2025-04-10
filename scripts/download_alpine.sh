@@ -5,8 +5,8 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BASE_DIR="$(dirname "$SCRIPT_DIR")"
 ALPINE_DIR="$BASE_DIR/alpine-zinit"
-ALPINE_MINIROOTFS="$ALPINE_DIR/alpine-minirootfs-3.19.1-x86_64.tar.gz"
-ALPINE_URL="https://dl-cdn.alpinelinux.org/alpine/v3.19/releases/x86_64/alpine-minirootfs-3.19.1-x86_64.tar.gz"
+ALPINE_MINIROOTFS="$ALPINE_DIR/alpine-minirootfs-edge-x86_64.tar.gz"
+ALPINE_URL="https://dl-cdn.alpinelinux.org/alpine/edge/releases/x86_64/alpine-minirootfs-edge-x86_64.tar.gz"
 
 # Create alpine-zinit directory if it doesn't exist
 mkdir -p "$ALPINE_DIR"
