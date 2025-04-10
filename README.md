@@ -100,6 +100,7 @@ You can check if all required dependencies are installed by running:
 - `scripts/create_tarball.sh`: Creates a tarball of the modified rootfs
 - `scripts/create_docker_image.sh`: Creates a Docker image from the modified rootfs
 - `scripts/status.sh`: Checks the status of the project
+- `scripts/save_context.sh`: Saves the current context of the project to a file
 
 ## Service Configurations
 
