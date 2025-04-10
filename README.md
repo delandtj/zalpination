@@ -81,6 +81,12 @@ You can check if all required dependencies are installed by running:
    This will create a Docker image named `alpine-zinit` from the modified rootfs.
    You can run it using: `docker run -it --device=/dev/kmsg:/dev/kmsg:rw alpine-zinit`
 
+9. Save the current context of the project (optional):
+   ```
+   ./scripts/save_context.sh
+   ```
+   This will save the current context of the project to a file named `zalpination_context.txt`.
+
 4. The modified rootfs will be available at:
    ```
    alpine-zinit/rootfs/
