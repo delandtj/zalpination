@@ -1,0 +1,6 @@
+exec: /bin/mount -o remount,rw /
+oneshot: true
+after:
+  - devfs
+  - sysfs
+  - fsck

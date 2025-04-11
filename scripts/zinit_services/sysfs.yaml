@@ -1,0 +1,4 @@
+exec: /sbin/mount -t sysfs none /sys
+oneshot: true
+after:
+  - devfs

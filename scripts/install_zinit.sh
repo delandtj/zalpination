@@ -13,8 +13,9 @@ if [ -z "$1" ]; then
     echo "Usage: $0 <rootfs_path>"
     exit 1
 fi
-
 ROOTFS="$1"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ZINIT_BIN="./zinit"
 ZINIT_BIN="./zinit"
 
 # Check if zinit binary exists
@@ -58,11 +59,15 @@ after:
 EOF
 
 # dropbear (SSH) service
-cat > "$ROOTFS/etc/zinit/dropbear.yaml" << EOF
-exec: "/usr/sbin/dropbear -F"
+cat > "$ROOTFS/etc/zinit/sshd.yaml" << EOF
+exec: "/usr/sbin/sshd -D"
 after:
   - networking
 EOF
+
+# Copy additional service configurations
+echo "Copying additional service configurations..."
+cp "$SCRIPT_DIR/zinit_services/"*.yaml "$ROOTFS/etc/zinit/"
 
 # Modify inittab to use zinit as PID 1
 echo "Modifying inittab to use zinit as PID 1..."

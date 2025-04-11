@@ -1,0 +1,5 @@
+exec: /sbin/fsck -A -T -C -p
+oneshot: true
+after:
+  - devfs
+  - sysfs

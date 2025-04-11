@@ -1,0 +1,5 @@
+exec: /bin/hostname -F /etc/hostname
+oneshot: true
+after:
+  - devfs
+  - sysfs

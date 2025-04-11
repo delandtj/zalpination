@@ -1,0 +1,7 @@
+exec: /bin/mount -a -t nonfs,noproc,nosysfs,notmpfs,nodevpts,nodevtmpfs
+oneshot: true
+after:
+  - devfs
+  - sysfs
+  - fsck
+  - root

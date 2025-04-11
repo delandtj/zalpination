@@ -1,0 +1,2 @@
+exec: /sbin/mount -t devtmpfs none /dev
+oneshot: true
